@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Understanding Deep Learning Architectures | Vijaya Bandaru</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="site-nav">
+  <a href="../index.html">Home</a>
+  <a href="../artifacts.html">Artifacts</a>
+</header>
+
+<main class="artifact-page">
+  <a class="back-link" href="../artifacts.html">&larr; Back to Artifacts</a>
+
+  <h1>Understanding Deep Learning Architectures: From Theory to Ethical Practice</h1>
+
+  <h2>Introduction</h2>
+  <p>
+    This artifact comes from a class module on deep learning architectures, where I worked
+    through how Artificial Neural Networks (ANNs), Convolutional Neural Networks (CNNs),
+    Recurrent Neural Networks (RNNs), and Generative Adversarial Networks (GANs) actually
+    learn, and grappled with the ethical implications of generative AI, including synthetic
+    media like deepfakes. Where my first two artifacts show hands-on building and comparative
+    algorithm analysis, this one shows a different skill: theoretical grounding and ethical
+    reasoning about the technology I'm building with.
+  </p>
+
+  <h2>Description</h2>
+  <p>
+    Rather than reading the architectures as a static list of definitions, I used a dialogue
+    with Claude to actively work through each one: what problem it's built to solve, how it
+    learns, and where it breaks down. That included the role activation functions play in
+    letting a network learn anything beyond a straight line, and a direct look at how GANs'
+    generator/discriminator setup, the same mechanism used for useful synthetic data, is also
+    what makes deepfakes possible.
+  </p>
+
+  <div class="work-sample">
+    <p><strong>Work Sample &mdash; Excerpt from the Learning Dialogue:</strong></p>
+    <p><em>Me:</em> "Why can't a plain ANN handle images well, and what does a CNN actually do differently?"</p>
+    <p><em>Claude:</em> "A plain ANN connects every input pixel to every neuron in the next layer, so a
+    modest image produces an enormous number of parameters, and the network has no sense that
+    nearby pixels are related. A CNN instead slides small filters across the image, so it
+    learns local patterns, edges, textures, shapes, that apply no matter where they appear in
+    the frame, and stacks those patterns into more complex features layer by layer."</p>
+    <p><em>Me:</em> "And a GAN is doing something completely different from both of those?"</p>
+    <p><em>Claude:</em> "Right, a GAN pits two networks against each other, a generator trying to produce
+    convincing fake data and a discriminator trying to catch the fakes, and they improve
+    together through that competition. It's the same mechanism behind both useful synthetic
+    training data and deepfakes; the architecture itself is ethically neutral, the application
+    is what raises the concern."</p>
+  </div>
+
+  <h2>Objective</h2>
+  <p>
+    My goal was to build a working conceptual model of each architecture, specific enough that
+    I can reason about which one fits a given real-world problem, rather than just recognizing
+    the acronyms, and to think seriously about the ethical responsibility that comes with
+    generative techniques before I ever deploy them.
+  </p>
+
+  <h2>Process</h2>
+
+  <h3>Working Through Each Architecture</h3>
+  <p>
+    I went architecture by architecture, ANNs as the baseline, CNNs for spatial/image data,
+    RNNs for sequential data like text or time series, and GANs for generation, asking Claude
+    to explain not just the mechanism but why that mechanism is the right fit for its typical
+    use case, and where activation functions fit into letting any of them learn non-linear
+    patterns at all.
+  </p>
+
+  <h3>Connecting Theory to Real Scenarios</h3>
+  <p>
+    For each architecture, I pushed the dialogue toward concrete, real-world applications
+    (image recognition for CNNs, language and forecasting for RNNs, synthetic data generation
+    for GANs) so the theory stayed tied to problems I might actually encounter building AI
+    agents, rather than staying abstract.
+  </p>
+
+  <h3>Reasoning Through the Ethics</h3>
+  <p>
+    I specifically worked through the ethical implications of generative techniques, deepfakes
+    in particular, discussing where the line falls between legitimate synthetic-data use
+    (augmenting training sets, privacy-preserving data sharing) and harmful misuse
+    (impersonation, misinformation), and what responsibilities that puts on someone building
+    these systems.
+  </p>
+
+  <h3>Connecting to Change Leadership</h3>
+  <p>
+    Given my background leading enterprise system rollouts, I also connected this material to
+    change leadership in AI/ML integration: understanding these architectures well enough to
+    set realistic expectations, and understanding their ethical risk profile well enough to
+    build in the right safeguards, are both things a leader introducing AI into an organization
+    needs to own, not delegate away entirely to the technical team.
+  </p>
+
+  <h2>Tools and Technologies Used</h2>
+  <p>Claude (Anthropic) as an AI dialogue partner to explain, question, and stress-test my understanding of ANN, CNN, RNN, and GAN architectures.</p>
+
+  <h2>Value Proposition</h2>
+
+  <h3>Unique Value</h3>
+  <p>
+    This artifact rounds out my portfolio with a skill the first two don't show on their own:
+    theoretical depth and ethical judgment, not just the ability to build an AI tool or compare
+    algorithms, but the ability to explain why a given architecture works, when it doesn't
+    apply, and what risks come with it.
+  </p>
+
+  <h3>Relevance</h3>
+  <p>
+    Combined with my Appian background and my goal of building AI agents professionally, this
+    matters because leading AI/ML integration in an enterprise setting requires more than
+    implementation skill; it requires being able to explain architectural tradeoffs to
+    non-technical stakeholders and to responsibly navigate the ethical questions generative AI
+    raises, both of which this artifact demonstrates directly.
+  </p>
+
+  <h2>References</h2>
+  <p>Course module: Deep Learning Architectures and Ethics (ANNs, CNNs, RNNs, GANs, activation functions, synthetic data ethics).</p>
+</main>
+
+<footer>&copy; 2026 Vijaya Bandaru. Built for my professional portfolio.</footer>
+
+</body>
+</html>
