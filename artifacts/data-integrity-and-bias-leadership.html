@@ -42,26 +42,46 @@
   <p>
     On the leadership side, I worked through a class discussion on how human bias enters AI
     systems, specifically through data selection, labeling, algorithm design, testing and
-    evaluation, and interpretation of results, and used that to write a personal value
-    statement and field-specific strategies for navigating bias as a leader in Appian-based
-    enterprise AI development.
+    evaluation, and interpretation of results. Two of the field-specific strategies I developed
+    from that discussion are the direct source of the connections below:
+  </p>
+  <p>
+    <strong>Strategy &mdash; Scrutinize the data behind every AI Skill, both its source and its
+    labels:</strong> Appian's Document Extraction &amp; Classification AI Skill depends entirely
+    on labeled training data. Whoever labels those documents brings their own judgment calls, so
+    labeling guidelines need periodic review, and ambiguous cases should be labeled by more than
+    one person to catch individual bias before it becomes the model's baseline.
+  </p>
+  <p>
+    <strong>Strategy &mdash; Treat algorithm and vendor selection as a bias decision, not just a
+    technical one:</strong> choosing between an Appian-native AI Skill and an external vendor
+    model isn't neutral; different models are trained on different data and carry different
+    embedded assumptions, so vendor selection should include a basic bias comparison, not just
+    accuracy and cost.
   </p>
 
   <div class="work-sample">
-    <p><strong>Work Sample &mdash; Where the Two Connect:</strong></p>
+    <p><strong>Work Sample &mdash; Connection 1: Labeling Bias and Row-Level Cross-Checking</strong></p>
     <p>
-      From the bias leadership reflection: <em>"Appian's Document Extraction &amp; Classification
-      AI Skill depends entirely on labeled training data. Whoever labels those documents brings
-      their own judgment calls, so labeling guidelines need periodic review, and ambiguous cases
-      should be labeled by more than one person to catch individual bias before it becomes the
-      model's baseline."</em>
+      The labeling strategy above is precisely the failure mode I was hunting for, row by row, in
+      the concessions dataset: values that looked plausible on their own but didn't hold up once
+      cross-checked against other fields (a category that didn't match its item, a margin that
+      didn't match its profit). The technical habit of not trusting a value until it's been
+      checked against independent evidence is the same habit that catches a mislabeled training
+      example before it becomes a model's baseline assumption.
     </p>
+  </div>
+
+  <div class="work-sample">
+    <p><strong>Work Sample &mdash; Connection 2: Interpretation Bias and the Outliers That Look Fine</strong></p>
     <p>
-      That is precisely the failure mode I was hunting for, row by row, in the concessions
-      dataset: values that looked plausible on their own but didn't hold up once cross-checked
-      (a category that didn't match its item, a margin that didn't match its profit). The
-      technical habit of not trusting a value until it's been checked against other evidence is
-      the same habit that catches bias before it gets baked into a model.
+      Several of the worst errors in the raw dataset didn't look extreme in isolation, a $2.50
+      unit price, an 80% margin stored as text, a category that was merely "inconsistent"
+      rather than obviously wrong. Each one only became visible once I checked it against a
+      second, independent fact (the item's approved price, the row's own Actual_Profit). That's
+      the same discipline my "interpretation of results" strategy is built on: resisting the
+      pull to accept an AI output because it looks fine at a glance, and instead logging and
+      checking the cases that are inconvenient or ambiguous rather than waving them through.
     </p>
   </div>
 
@@ -72,10 +92,15 @@
   <p>
     This artifact shows a range I don't think either piece would show alone: the technical
     rigor to actually find and fix real data-quality problems, and the leadership awareness to
-    explain why that rigor matters ethically, not just technically. For a field increasingly
-    built on AI systems trained on real organizational data, that combination, someone who can
-    both clean the data and lead a team in caring about why it needs to be clean, is exactly
-    the kind of range I want my portfolio to demonstrate.
+    explain why that rigor matters ethically, not just technically. Concretely, if I were
+    auditing an Appian AI Skill's document classification output and it looked fine at a glance,
+    the same discipline I used to catch a mismatched category or a corrupted margin in the
+    concessions data is exactly what I'd apply there: check the classification confidence
+    against the document's source or format, not just its stated result, because a quiet skew
+    toward one source type is the kind of error that hides in plain sight the same way a $2.50
+    price hid in a column of otherwise-correct numbers. That's the kind of range I want my
+    portfolio to demonstrate: not just knowing that bias matters, but having the row-level habits
+    that actually catch it.
   </p>
 </main>
 
