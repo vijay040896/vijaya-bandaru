@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Integrity as a Foundation for Ethical AI | Vijaya Bandaru</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="site-nav">
+  <a href="../index.html">Home</a>
+  <a href="../artifacts.html">Artifacts</a>
+</header>
+
+<main class="artifact-page">
+  <a class="back-link" href="../artifacts.html">&larr; Back to Artifacts</a>
+
+  <h1>Data Integrity as a Foundation for Ethical AI</h1>
+
+  <h2>Objective</h2>
+  <p>
+    I created this artifact to connect two pieces of work that turned out to be more related
+    than they first appeared: a hands-on data-cleaning project for a concession-sales dataset,
+    and a leadership reflection on navigating human bias in AI. My objective was to show that
+    the discipline of rigorous data cleaning isn't just a technical exercise, it's the same
+    discipline that prevents biased data from becoming biased AI in the first place.
+  </p>
+
+  <h2>Process</h2>
+  <p>
+    On the technical side, I audited a 214-row raw sales dataset and found five categories of
+    problems: duplicate and colliding transaction IDs, missing values, inconsistent formatting
+    (misspelled items, inconsistent capitalization), outliers and impossible values (a
+    quantity of 500 sold, a $99.99 price on a $3 item), and calculated fields (Revenue,
+    Actual_Profit) that didn't match their own formulas. I fixed each category using evidence
+    already present in the data, cross-referencing fields against each other, rather than
+    guessing, and documented every fix in a change log. I then applied PivotTable-style
+    summaries, a live SUMPRODUCT array formula, and a Solver-style optimization model to the
+    cleaned data.
+  </p>
+  <p>
+    On the leadership side, I worked through a class discussion on how human bias enters AI
+    systems, specifically through data selection, labeling, algorithm design, testing and
+    evaluation, and interpretation of results, and used that to write a personal value
+    statement and field-specific strategies for navigating bias as a leader in Appian-based
+    enterprise AI development.
+  </p>
+
+  <div class="work-sample">
+    <p><strong>Work Sample &mdash; Where the Two Connect:</strong></p>
+    <p>
+      From the bias leadership reflection: <em>"Appian's Document Extraction &amp; Classification
+      AI Skill depends entirely on labeled training data. Whoever labels those documents brings
+      their own judgment calls, so labeling guidelines need periodic review, and ambiguous cases
+      should be labeled by more than one person to catch individual bias before it becomes the
+      model's baseline."</em>
+    </p>
+    <p>
+      That is precisely the failure mode I was hunting for, row by row, in the concessions
+      dataset: values that looked plausible on their own but didn't hold up once cross-checked
+      (a category that didn't match its item, a margin that didn't match its profit). The
+      technical habit of not trusting a value until it's been checked against other evidence is
+      the same habit that catches bias before it gets baked into a model.
+    </p>
+  </div>
+
+  <h2>Tools</h2>
+  <p>Python (pandas) and Excel for the data-cleaning and PivotTable/SUMPRODUCT/Solver analysis; Claude (Anthropic) to help draft and refine the bias-leadership value statement and strategies.</p>
+
+  <h2>Value Proposition</h2>
+  <p>
+    This artifact shows a range I don't think either piece would show alone: the technical
+    rigor to actually find and fix real data-quality problems, and the leadership awareness to
+    explain why that rigor matters ethically, not just technically. For a field increasingly
+    built on AI systems trained on real organizational data, that combination, someone who can
+    both clean the data and lead a team in caring about why it needs to be clean, is exactly
+    the kind of range I want my portfolio to demonstrate.
+  </p>
+</main>
+
+<footer>&copy; 2026 Vijaya Bandaru. Built for my professional portfolio.</footer>
+
+</body>
+</html>

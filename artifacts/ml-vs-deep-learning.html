@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ML vs. Deep Learning Report | Vijaya Bandaru</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="site-nav">
+  <a href="../index.html">Home</a>
+  <a href="../artifacts.html">Artifacts</a>
+</header>
+
+<main class="artifact-page">
+  <a class="back-link" href="../artifacts.html">&larr; Back to Artifacts</a>
+
+  <h1>Machine Learning Approaches: Simple ML vs. Deep Learning</h1>
+
+  <h2>Introduction</h2>
+  <p>
+    For this class activity, I compared two real-world AI applications &mdash; one built on a
+    simple, classic machine learning algorithm and one built on deep learning &mdash; to explain
+    why each approach fits its problem, and why the other approach would not. Where my chatbot
+    artifact shows hands-on AI agent building, this report shows a different skill: evaluating
+    and reasoning about which AI/ML approach is the right tool for a given problem.
+  </p>
+
+  <h2>Description</h2>
+  <p>
+    I selected two examples: email spam detection, typically handled with algorithms like
+    logistic regression or decision trees, and image-based facial recognition, handled with
+    deep convolutional neural networks (CNNs). For each, I researched a real, named
+    implementation rather than a hypothetical one, and analyzed the reasoning behind the
+    algorithm choice.
+  </p>
+
+  <div class="work-sample">
+    <p><strong>Work Sample:</strong> the full written report, as submitted for class.</p>
+    <a class="download-link" href="../assets/ML_Report.pdf" target="_blank" rel="noopener">View / Download the full report (PDF) &rarr;</a>
+  </div>
+
+  <h2>Objective</h2>
+  <p>
+    My goal was to move past just naming algorithms and actually justify, with real-world
+    evidence, why a given technique is the right (or wrong) fit for a specific kind of problem
+    &mdash; the kind of judgment call that matters when deciding how to architect an AI
+    solution, not just how to build one.
+  </p>
+
+  <h2>Process</h2>
+
+  <h3>Selecting the Examples</h3>
+  <p>
+    I picked one example representing traditional/simple ML (a classification problem with
+    structured, engineered features) and one representing deep learning (a problem involving
+    raw, high-dimensional, unstructured data), so the comparison would highlight a genuine
+    contrast rather than two similar cases.
+  </p>
+
+  <h3>Grounding in Real Applications</h3>
+  <p>
+    Rather than relying on textbook descriptions, I researched actual production systems:
+    Gmail's spam filter (which processes over 15 billion unwanted messages a day at roughly
+    99.9% accuracy using lightweight, feature-based classifiers) and Facebook's DeepFace
+    system (launched in 2014, trained on four million images of four thousand people, reaching
+    about 97.35% accuracy using a deep CNN) to make sure my reasoning was tied to verifiable,
+    real-world evidence.
+  </p>
+
+  <h3>Analyzing the Fit</h3>
+  <p>
+    For spam detection, I reasoned that the relevant signals &mdash; word frequency, sender
+    reputation, links, headers &mdash; are already well understood and easy to engineer, so a
+    simple, interpretable, cheap-to-run model is the better fit at Gmail's massive scale.
+  </p>
+  <p>
+    For facial recognition, I reasoned the opposite: raw pixel data is too high-dimensional and
+    variable (pose, lighting, angle) for hand-engineered features to capture reliably, which is
+    exactly the problem a CNN is designed to solve by learning its own feature hierarchy
+    directly from the image data.
+  </p>
+
+  <h3>Arguing the Counterfactual</h3>
+  <p>
+    To make the comparison rigorous, I also explained why the <em>other</em> approach would be
+    a worse fit in each case &mdash; deep learning would be unnecessary computational overhead
+    for spam detection, and simple ML would be structurally incapable of matching a CNN's
+    accuracy on raw facial image data.
+  </p>
+
+  <h2>Tools and Technologies Used</h2>
+  <p>
+    Web research to verify real-world implementations, comparative technical analysis, and
+    Microsoft Word for the final written report.
+  </p>
+
+  <h2>Value Proposition</h2>
+
+  <h3>Unique Value</h3>
+  <p>
+    This artifact shows a different, complementary skill to my chatbot project: not just
+    building with AI, but critically evaluating which AI/ML technique actually fits a given
+    problem, and being able to explain that reasoning clearly in writing.
+  </p>
+
+  <h3>Relevance</h3>
+  <p>
+    As I move toward building AI agents professionally, this kind of judgment &mdash; matching
+    the right approach (a simple rule-based check vs. a full model, a lightweight classifier vs.
+    a deep model) to the right problem &mdash; is exactly the skill that separates functional
+    AI tools from well-architected ones.
+  </p>
+
+  <h2>References</h2>
+  <p>Gmail spam-filtering statistics and process: Google/Gmail machine learning spam filtering coverage (2026).</p>
+  <p>DeepFace architecture, training scale, and accuracy: Facebook DeepFace (2014) facial recognition system overview.</p>
+</main>
+
+<footer>&copy; 2026 Vijaya Bandaru. Built for my professional portfolio.</footer>
+
+</body>
+</html>
